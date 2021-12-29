@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Microsoft.AspNetCore.Http;
+
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    Layout = "_LayoutMember";
+}
+
+<section class="my-5">
+    <div class="container bg-white p-4">
+        <div class="row d-flex justify-content-between p-3">
+            <div class="pl-2 text-body font-weight-bold">
+                <h6 class="text-hide" id="userId">@HttpContextAccessor.HttpContext.Session.GetInt32("UserId")</h6>
+                <h4>List Diskusi User</h4>
+            </div>
+        </div>
+        <div class="container" id="diskusi1">
+        </div>
+        <div class="container">
+            <div class="container" id="jumlahKomen1">
+
+            </div>
+            <div class="container" id="tampilKomen1">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+@*<div class="container-fluid p-3 text-black">
+    <div class="text-black">
+        <h2>List Discussion</h2>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3"></div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover table-primary" id="tableDiscussion" width="150%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Discussion Id</th>
+                            <th>Title</th>
+                            <th>Content</th>
+                            <th>Date</th>
+                            <th>StatusComt</th>
+                            <th>User Id</th>
+                            <th>Category Id</th>
+                            <th>Type Id</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody" id="listDiscussion"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>*@

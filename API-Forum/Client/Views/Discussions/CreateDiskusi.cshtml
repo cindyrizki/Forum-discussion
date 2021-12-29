@@ -1,0 +1,74 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Microsoft.AspNetCore.Http;
+
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    Layout = "_LayoutMember";
+}
+
+<section class="new-topic my-5">
+    <div class="container bg-white p-4">
+        <div class="row d-flex justify-content-between p-3">
+            <div class="">
+                <img src="/page/img/message_icon2.png" class="img-fluid">
+                <span class="pl-2 text-body font-weight-bold">Create New Discussion</span>
+            </div>
+        </div>
+        <div class="form py-3">
+            <form id="postDiskusi">
+                <div class="form-group">
+                    <label for="formInputTitle">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label for="formInputContent">Content</label>
+                    <input type="text" class="form-control" id="contentD" name="contentD" placeholder="Content">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="formInputDateDis">Date Discussion</label>
+                        <input type="date" class="form-control" id="dateDis" name="dateDis" placeholder="DateDis">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="formInputStatusComt">Status Comt</label>
+                        <select id="statusComt" class="form-control" name="statusComt" required>
+                            <option>Choose...</option>
+                            <option value="0">Active</option>
+                            <option value="1">Disable</option>
+                        </select>
+                        <div class="invalid-tooltip">
+                            Please insert your statusComt
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="formInputUserId">Name User</label>
+                        <input type="text" class="form-control" id="userId" name="userId" placeholder="UserId" value="@HttpContextAccessor.HttpContext.Session.GetInt32("UserId")" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="formInputCategoryId">Category</label>
+                        <input type="text" list="suggestion" name="categoryId" id="categoryId" class="form-control" placeholder="Choose Category.... ">
+                        <datalist id="suggestion">
+
+                        </datalist>
+                        @*<select id="categoryId" class="form-control" name="categoryId">
+                        </select>*@
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="formInputTypeId">Type</label>
+                        <select id="typeId" class="form-control" name="typeId">
+                        </select>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-end mt-4 px-3">
+                    <button type="button" class="btn btn-warning" onclick="valid()">Add Data</button>
+                    <button type="button" class="btn btn-danger" onclick=window.location.reload();>Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

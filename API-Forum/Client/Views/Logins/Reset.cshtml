@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Reset Password";
+    Layout = "_LayoutLogin";
+}
+
+
+    <div class="container">
+        <div class="form col-6 mx-auto">
+            <form id="reset">
+                <br /><br />
+                <div class="mx-3 px-4 py-4" id="login">
+                    <h2><em>Reset</em> Password</h2>
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                        <div class="invalid-feedback">
+                            Please insert your valid email
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">New Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                        <div class="invalid-feedback">
+                            Please insert your password <br>
+                            min. 8 character (uppercase, lowercase, number, character)
+                        </div>
+                    </div>
+                    <button type="button" class="mb-3 btn-lg btn-block" onclick="ValidR()">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>

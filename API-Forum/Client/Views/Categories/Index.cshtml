@@ -1,0 +1,69 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+}
+
+<section>
+    <div class="text-left">
+        <div class="text-black">
+            <h2>Category</h2>
+        </div>
+    </div>
+
+    <p>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalCategory">
+            <i class="fa fa-plus"></i>
+        </button>
+    </p>
+
+    @*Table Category*@
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="tableCategory" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Category ID</th>
+                        <th>Name Category</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody" id="listCategory"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal" id="modalCategory" name="modalCategory" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Data Category</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formCategory">
+                        <div class="form-row" id="formCat" style="display:none;">
+                            <div class="col-md-6 mb-3">
+                                <label for="formInputCategoryId">Category ID</label>
+                                <input type="text" class="form-control" id="categoryId" name="categoryId" placeholder="categoryId" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="formInputCategory">Category Name</label>
+                                <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="Category Name">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-warning" id="btnAdd" form="formCategory">Add Data</button>
+                            <button type="button" class="btn btn-warning" id="btnUpdate" style="display:none;" onclick="updateCategory();">Change Data</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" onclick=window.location.reload();>Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

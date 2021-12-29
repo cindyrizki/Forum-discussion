@@ -1,0 +1,102 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Microsoft.AspNetCore.Http;
+
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    Layout = "_LayoutMember";
+}
+
+<section class="my-5">
+    <div class="container bg-white p-4">
+        <h6 class="hid"></h6>
+        <div class="row d-flex justify-content-between p-3">
+            <div class="pl-2 text-body font-weight-bold">
+                <h4>Forum Discussion</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="container" id="Category">
+                    <h5>Category</h5>
+                    <div class="card">
+                        <div class="card-body" id="category">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="dropdown mx-2">
+                    <button class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose Today!
+                        <i class="fas fa-chevron-down pl-2"></i>
+                    </button>
+                    <div class="dropdown-menu py-3 mt-0" aria-labelledby="dropdownMenuButton">
+                        <div class="row">
+                            <div class="col-2">
+                                <ul class="list-group">
+                                    <li class="list-item"><button class="btn" onclick="getTrend()">Hot Tread!</button></li>
+                                    <li class="list-item"><button class="btn" onclick="getNewThread()">New Threa!</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" id="diskusi">
+                </div>
+                <div class="container">
+                    <div class="container" id="jumlahKomen">
+
+                    </div>
+                    <div class="collapse" id="postKomen">
+                        <section class="new-topic my-5">
+                            <div class="container bg-white p-4">
+                                <div class="row d-flex justify-content-between p-3">
+                                    <div class="">
+                                        <img src="/page/img/message_icon2.png" class="img-fluid">
+                                        <span class="pl-2 text-body font-weight-bold">Create Comment</span>
+                                    </div>
+                                </div>
+                                <div class="form py-3">
+                                    <form id="formComment">
+                                        <div class="form-group">
+                                            <label for="formInputContentComment">Content Comment</label>
+                                            <input type="text" class="form-control" id="contentComment" name="contentComment" placeholder="Content Comment">
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="formInputDateComment">Date Comment</label>
+                                                <input type="date" class="form-control" id="dateCom" name="dateCom" placeholder="DateCom">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="formInputUserId">Name User</label>
+                                                <input type="text" class="form-control" id="user" name="user" placeholder="UserId" value="@HttpContextAccessor.HttpContext.Session.GetInt32("UserId")" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label for="formInputDiscussionId">Content Discussion</label>
+                                                <input type="text" class="form-control" id="dis" name="dis" placeholder="DisId" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="row d-flex justify-content-end mt-4 px-3">
+                                            <button type="button" class="btn btn-warning" onclick="validComment()">Add Comment</button>
+                                            <button type="button" class="btn btn-danger" onclick=window.location.reload();>Close</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="container" id="tampilKomen">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

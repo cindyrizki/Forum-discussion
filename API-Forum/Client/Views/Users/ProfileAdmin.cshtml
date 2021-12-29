@@ -1,0 +1,106 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Microsoft.AspNetCore.Http;
+
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<section class="new-topic my-5">
+    <div class="container bg-white p-4">
+        <div class="row d-flex justify-content-between p-3">
+            <div class="">
+                <img src="/page/img/wrote2.png" class="img-fluid">
+                <span class="pl-2 text-body font-weight-bold">Edit Profile</span>
+            </div>
+        </div>
+        <div class="form py-3">
+            <form id="update1" name="update" class="need-validation user" novalidate>
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="inputNIK">UserId</label>
+                            <input type="text" class="form-control" id="id" name="id" placeholder="User Id" value="@HttpContextAccessor.HttpContext.Session.GetInt32("UserId")" disabled>
+                            <div class="invalid-feedback">
+                                Please insert your nik
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="inputFirstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter First Name" required>
+                            <div class="invalid-feedback">
+                                Please insert your first name
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="inputLastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name" required>
+                            <div class="invalid-feedback">
+                                Please insert your last name
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="inputPhone">Phone</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">+62</div>
+                            </div>
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone" required>
+                            <div class="invalid-feedback">
+                                Please insert your phone number
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="inputBirthDate">BirthDate</label>
+                            <input type="date" class="form-control" id="birthDate" name="birthDate" placeholder="Enter Birth Date" required>
+                            <div class="invalid-feedback">
+                                Please insert your birth date
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email" required>
+                            <div class="invalid-feedback">
+                                Please insert your valid email
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="inputState">Gender</label>
+                            <select id="gender" class="form-control" name="gender" required>
+                                <option>Choose...</option>
+                                <option value="0">Male</option>
+                                <option value="1">Female</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please insert your gender
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-end mt-4 px-3">
+                    <button type="button" class="btn btn-warning" onclick="ValidateUpdateA(document.getElementById('id').value)">Save Changes</button>
+                    <button type="button" class="btn btn-danger" onclick=window.location.reload();>Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+

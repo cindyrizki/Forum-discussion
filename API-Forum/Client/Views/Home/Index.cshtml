@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_LayoutLanding";
+}
+
+<section class="" style="background-color: rgba(22,34,57,0.85)">
+    <div class="container p-4">
+        <div class="row d-flex justify-content-between p-3">
+            <div class="pl-2 text-light font-weight-bold">
+                <h4>Forum Discussion</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="container" id="Category">
+                    <h6 class="text-light">Choose Category</h6>
+                    <div class="card">
+                        <div class="card-body" id="category">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dropdown mx-2">
+                    <button class="btn text-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose Today!
+                        <i class="fas fa-chevron-down pl-2"></i>
+                    </button>
+                    <div class="dropdown-menu py-3 mt-0" aria-labelledby="dropdownMenuButton">
+                        <div class="row">
+                            <div class="col-2">
+                                <ul class="list-group">
+                                    <li class="list-item"><span class="badge badge-danger"><i class="fas fa-burn">HOT!</i><button class="btn" onclick="getTrend()">Hot Tread!</button></span></li>
+                                    <li class="list-item"><span class="badge badge-info"><i class="fas fa-bullhorn">NEW!</i><button class="btn" onclick="getNewThread()">New Thread!</button></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" id="diskusi">
+                </div>
+                <div class="container">
+                    <div class="container" id="jumlahKomen">
+
+                    </div>
+                    <div class="container" id="tampilKomen">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

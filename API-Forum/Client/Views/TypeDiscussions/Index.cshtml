@@ -1,0 +1,69 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+}
+
+<section>
+    <div class="text-left">
+        <div class="text-black">
+            <h2>Type Discussion</h2>
+            <p></p>
+        </div>
+    </div>
+
+    <p>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalType">
+            <i class="fa fa-plus"></i>
+        </button>
+    </p>
+
+    @*Table Type Discussion*@
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="tableType" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Type ID</th>
+                        <th>Name Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="listType"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal" id="modalType" name="modalType" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Data Type</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formType">
+                        <div class="form-row" id="formType1" style="display:none;">
+                            <div class="col-md-6 mb-3">
+                                <label for="formInputTypeId">Type ID</label>
+                                <input type="text" class="form-control" id="typeId" name="typeId" placeholder="Type Id" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="formInputTypeDiscussion">Type Name</label>
+                                <input type="text" class="form-control" id="typeName" name="typeName" placeholder="Type Name">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-warning" id="btnAdd" form="formType">Add Data</button>
+                            <button type="button" class="btn btn-warning" id="btnUpdate" style="display:none;" onclick="updateType();">Change Data</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" onclick=window.location.reload();>Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

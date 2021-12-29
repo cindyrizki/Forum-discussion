@@ -1,0 +1,82 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Sign Up";
+    Layout = "_LayoutLogin";
+}
+
+
+    <div class="container">
+        <div class="form col-8 mx-auto">
+            <form id="register">
+                <br />
+                <div class="mx-3 px-4 py-4" id="regis">
+                    <h2><em>Sign Up</em> Member</h2>
+                    <div class="row">
+                        <div class="col form-group">
+                            <label for="inputFirstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+                            <div class="invalid-feedback">
+                                Please insert your first name
+                            </div>
+                        </div>
+                        <div class="col form-group">
+                            <label for="inputLastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+                            <div class="invalid-feedback">
+                                Please insert your last name
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 form-group">
+                            <label for="inputPhone">Phone Number</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">+62</div>
+                                </div>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                                <div class="invalid-feedback">
+                                    Please insert your phone number
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 form-group">
+                            <label for="inputBirthDate">BirthDate</label>
+                            <input type="date" class="form-control" id="birthDate" name="birthDate" required>
+                            <div class="invalid-feedback">
+                                Please insert your birth date
+                            </div>
+                        </div>
+                        <div class="col-4 form-group">
+                            <label for="inputState">Gender</label>
+                            <select id="gender" class="form-control" name="gender" required>
+                                <option value="0">Male</option>
+                                <option value="1">Female</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please insert your gender
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                        <div class="invalid-feedback">
+                            Please insert your valid email
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                        <div class="invalid-feedback">
+                            Please insert your password <br>
+                            min. 8 character (uppercase, lowercase, number, character)
+                        </div>
+                    </div>
+                    <button type="button" class="mb-3 btn-lg btn-block" onclick="Valid()">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
