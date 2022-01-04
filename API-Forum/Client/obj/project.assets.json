@@ -7507,11 +7507,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\GitHub\\ForumDisscussion\\API-Forum\\Client\\Client.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\GitHub\\Forum-discussion\\API-Forum\\Client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\ForumDisscussion\\API-Forum\\Client\\Client.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Forum-discussion\\API-Forum\\Client\\Client.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\ForumDisscussion\\API-Forum\\Client\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Forum-discussion\\API-Forum\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7528,8 +7528,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\LENOVO\\Documents\\GitHub\\ForumDisscussion\\API-Forum\\API-Forum\\API-Forum.csproj": {
-              "projectPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\ForumDisscussion\\API-Forum\\API-Forum\\API-Forum.csproj"
+            "C:\\Users\\LENOVO\\Documents\\GitHub\\Forum-discussion\\API-Forum\\API-Forum\\API-Forum.csproj": {
+              "projectPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Forum-discussion\\API-Forum\\API-Forum\\API-Forum.csproj"
             }
           }
         }

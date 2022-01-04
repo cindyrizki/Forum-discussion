@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Documents\\GitHub\\ForumDisscussion\\API-Forum\\API-Forum\\API-Forum.csproj": {}
+    "C:\\Users\\LENOVO\\Documents\\GitHub\\Forum-discussion\\API-Forum\\API-Forum\\API-Forum.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Documents\\GitHub\\ForumDisscussion\\API-Forum\\API-Forum\\API-Forum.csproj": {
+    "C:\\Users\\LENOVO\\Documents\\GitHub\\Forum-discussion\\API-Forum\\API-Forum\\API-Forum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\GitHub\\ForumDisscussion\\API-Forum\\API-Forum\\API-Forum.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\GitHub\\Forum-discussion\\API-Forum\\API-Forum\\API-Forum.csproj",
         "projectName": "API-Forum",
-        "projectPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\ForumDisscussion\\API-Forum\\API-Forum\\API-Forum.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Forum-discussion\\API-Forum\\API-Forum\\API-Forum.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\ForumDisscussion\\API-Forum\\API-Forum\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Forum-discussion\\API-Forum\\API-Forum\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

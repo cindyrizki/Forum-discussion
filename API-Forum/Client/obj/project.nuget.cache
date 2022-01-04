@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "71KJP6QA1Mt/wGrC22BHlGhG1S1or6EAdxjgFUQYaamaxksSdZCUGmJZYIncZjHTw6o8JbfNmXlxPIc7rvffrQ==",
+  "dgSpecHash": "tOQe8LaQFpsr0En83g8O67Tj/OIaWjERLzv4wQ4+zT9z7psRmYq8+KLLrvPjGN5Ok/FlBVmBIsjf/Lx9at381Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\Documents\\GitHub\\ForumDisscussion\\API-Forum\\Client\\Client.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Documents\\GitHub\\Forum-discussion\\API-Forum\\Client\\Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
